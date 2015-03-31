@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                              http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+    <!-- Defines a parameter that available to all servlets within an app -->
+    <context-param>
+        <!-- Specifies the name of a parameter -->
+        <param-name>custServEmail</param-name>
+        <!-- Specifies the value of a parameter -->
+        <param-value>custserv@appX.com</param-value>
+    </context-param>
+   
+   <!-- Definitios for the servlets -->
+    <servlet>
+         <!-- Specifies unique name for the servlet -->
+        <servlet-name>EmailListServlet</servlet-name>
+         <!-- Specifies tje class for the serlet. 
+         this includes the package and name -->
+        <servlet-class>controller.email.EmailListServlet</servlet-class>
+        
+        <!-- Defines a name/value pair for an 
+        initialization parameter for a servlet -->
+        <init-param>
+            <param-name>relativePathToFile</param-name>
+            <param-value>/WEB-INF/EmailList.txt</param-value>
+        </init-param>
+    </servlet>
+     
+    <!-- Maps a servlet to a URL(s) -->    
+    <servlet-mapping>
+        <servlet-name>EmailListServlet</servlet-name>
+        <!-- Specifies the URL or URLs to the servlet above. 
+        It may specify a virtual dir or file  that doesn't exists -->
+        <url-pattern>/emailList</url-pattern>
+    </servlet-mapping>
+    <!-- specifies an HTML page or JSP that's displayed
+    when the app encounters an uncaught exception
+    or certain typ of HTTP status error code -->
+ 
+ 
+    
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
