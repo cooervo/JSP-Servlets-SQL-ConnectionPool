@@ -47,5 +47,6 @@ We should strive to keep the model, view, controller as independent as possible 
 ### Todo's
 
 * MySQL & JDBC implementation/ Perhaps JPA
+* Add XSS protection with JSTL out tags
 
 
