@@ -47,8 +47,20 @@ We should strive to keep the model, view, controller as independent as possible 
 3) A JavaBean must implement the **Serializable** or **Externalizable interface**. The Serializable interface indicates that a class contains get, set and is(for booleans) methods that another class can use to read and write an objects instance variables to and from a persistent data source. This can make Tomcat to save the Users object state (serialize) befor it shuts down and it can restore (deserialize) the User objects state when it start up next time
  
  *	JavaBeans apart from defining business objects. Can be used to define buttons and other user interface controls. 
- *  Java beans are just Java classes (plain old java object=POJO)
+ * Java beans are just Java classes (plain old java object=POJO)
+ 
+----------------------
+----------------------
+#####Screenshots:
 
+######Adding a new user
+![Alt text](http://i.imgur.com/NmbhCYU.png)
+
+######Success screen
+![Alt text](http://i.imgur.com/wQdl1A8.png)
+
+######Error validation (repeated email)
+![Alt text](http://i.imgur.com/hKihdb1.png)
 
 
 
