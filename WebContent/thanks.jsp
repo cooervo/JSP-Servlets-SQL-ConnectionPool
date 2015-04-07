@@ -3,7 +3,6 @@
 
 <c:import url="/includes/header.html"/>    
 
-
    <div id="main-wrapper">
        <h1>Thanks for joining our email list</h1>
    
@@ -12,12 +11,13 @@
         <%--The following are known as Expression Language tags (EL) 
         they always are used ${...} --%> 
         <ul> 
+        <%-- JSTL out tag to escape chars for XSS protection --%>
           <li><label>Email:</label>
-          <span>${user.email}</span><br></li>
+          <span><c:out value="${user.email}" /></span><br></li>
           <li><label>First Name:</label>
-          <span>${user.firstName}</span><br></li>
+          <span><c:out value="${user.firstName}" /></span><br></li>
           <li><label>Last Name:</label>
-          <span>${user.lastName}</span><br></li>
+          <span><c:out value="${user.lastName}" /></span><br></li>
        </ul>
        <!-- Notice there's no JAva code embedded in this JSP, 
        remember the JSP is part of the VIEW so it's bad practice

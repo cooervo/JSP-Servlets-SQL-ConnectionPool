@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
-<!-- The above are JSP directives -->
+<!-- above: JSP directives -->
 
 <c:import url="/includes/header.html"/>    
 
@@ -9,12 +9,12 @@
       <h1>Join our email list</h1>
       <p>To join our email list, please enter your name and email address in the form below</p>
       
-      <!-- JSP+JSTL if message isn't null then show it-->
+      <%-- if message isn't null then show it --%> 
       <c:if test="${message != null }">
-         <div id="error-message">${message}</div>
+         <%-- JSTL out tag to escape chars for XSS protection --%>
+         <div id="error-message"><c:out value="${message}"/></div>
       </c:if>
       <form action="emailList" method="post"><!-- Request servlet through mapped URL emailList -->
-   
    
          <input type="hidden" name="action" value="add">
          
