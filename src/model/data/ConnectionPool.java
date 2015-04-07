@@ -17,7 +17,7 @@ public class ConnectionPool {
         try {
             InitialContext ic = new InitialContext();
             //lookup param must match the context.xml <Resource name="jdbc/schema-name">
-            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/murach");
+            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/schema-name");
             
         } catch (NamingException e) {
             System.out.println(e);

@@ -8,16 +8,20 @@ The second page of this app is a JSP that display the data that the user has ent
 ### Technologies & guidelines used
 This website uses the following technologies to work properly:
 
-* JSP (with JSTL & EL)
-* JSP custom tags
+* JSP (with JSTL, EL, includes and custom tags)
+* JSP <c:out> tags to escape chars and protect against XSS (cross site scripting)
+* JDBC and prepared statement to protect against SQL injection attacks
 * Servlets
 * JavaBean (User.class)
-* MySQL & JDBC
+* MySQL 
+* Object Relational Mapping (ORM) in class UserDB
 * HTML and CSS
 * XML
 * Apache Tomcat
 * Git for VCS
 * MVC compound pattern to help structure the project
+
+
 
 ###Additional Notes
 implementing the **MVC compound pattern** in where the views, model and controller are all organized into separate files:
@@ -45,10 +49,6 @@ We should strive to keep the model, view, controller as independent as possible 
  *	JavaBeans apart from defining business objects. Can be used to define buttons and other user interface controls. 
  *  Java beans are just Java classes (plain old java object=POJO)
 
-### Todo's
 
-* MySQL & JDBC implementation/ Perhaps JPA
-* Add XSS protection with JSTL out tags
-* Add a custom tag
 
 

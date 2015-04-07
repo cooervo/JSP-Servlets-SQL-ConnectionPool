@@ -38,8 +38,7 @@ public class EmailListServlet extends HttpServlet {
 	            // validate the parameters
 	            String message;
 	            if (UserDB.emailExists(user.getEmail())) {
-	                message = "This email address already exists.<br>" +
-	                          "Please enter another email address.";
+	                message = "This email address already exists.";
 	                url = "/index.jsp";
 	            }else if (firstName == null || lastName == null ||
 	                firstName.isEmpty() || lastName.isEmpty() ) {

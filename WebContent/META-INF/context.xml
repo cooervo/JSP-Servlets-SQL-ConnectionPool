@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml> 
-<Context path="/Connection-Pool-EmailList-App">
+<Context path="/root-dir-name">
    <!-- driverClassName: Class name for the old mm.mysql JDBC driver is org.gjt.mm.mysql.Driver 
       - we recommend using Connector/J though. Class name for the official MySQL 
       Connector/J driver is com.mysql.jdbc.Driver. -->
@@ -21,10 +21,10 @@
    <!-- logAbandoned, removeAbandoned, removeAbandonedTimeout: Control whether 
       the container will prevent connection pool leaks by automatically removing 
       Connection, Statement, ResultSet, etc. objects that haven't been closed -->
-   <Resource name="jdbc/murach" auth="Container"
+   <Resource name="jdbc/schema-name" auth="Container"
       driverClassName="com.mysql.jdbc.Driver"
-      url="jdbc:mysql://localhost:3306/murach"
-      username="root" password="sesame" 
+      url="jdbc:mysql://localhost:3306/schema-name"
+      username="userX" password="passwordX" 
       maxActive="100" maxIdle="30" maxWait="10000" 
       logAbandoned="true" removeAbandoned="true"
       removeAbandonedTimeout="60" type="javax.sql.DataSource" />
