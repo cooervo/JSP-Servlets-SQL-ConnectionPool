@@ -9,6 +9,7 @@ The second page of this app is a JSP that display the data that the user has ent
 This website uses the following technologies to work properly:
 
 * JSP (with JSTL & EL)
+* JSP custom tags
 * Servlets
 * JavaBean (User.class)
 * MySQL & JDBC
@@ -47,5 +48,7 @@ We should strive to keep the model, view, controller as independent as possible 
 ### Todo's
 
 * MySQL & JDBC implementation/ Perhaps JPA
+* Add XSS protection with JSTL out tags
+* Add a custom tag
 
 
