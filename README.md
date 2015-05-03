@@ -2,7 +2,7 @@
 
 #####Screenshots:
 
-######Adding a new user********************* Success screen**************************Error validation (repeated email)
+From left to right: Adding a new user, Success screen, Error validation (repeated email)
 ![Alt text](http://i.imgur.com/NmbhCYU.png) ![Alt text](http://i.imgur.com/wQdl1A8.png) ![Alt text](http://i.imgur.com/hKihdb1.png)
 
 
